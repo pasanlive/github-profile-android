@@ -1,0 +1,70 @@
+query loadData {
+  viewer {
+    avatarUrl(size: 64)
+    name
+    email
+    login
+    starredRepositories(first: 10, orderBy: {field: STARRED_AT, direction: ASC}) {
+      edges {
+        node {
+          name
+          description
+          stargazerCount
+          languages(first: 1) {
+            nodes {
+              name
+            }
+          }
+          owner {
+            avatarUrl(size: 24)
+            login
+          }
+        }
+      }
+    }
+    topRepositories(orderBy: {field: CREATED_AT, direction: ASC}, first: 10) {
+      edges {
+        node {
+          name
+          description
+          stargazerCount
+          languages(first: 1) {
+            nodes {
+              name
+            }
+          }
+          owner {
+            avatarUrl
+            login
+          }
+        }
+      }
+    }
+    pinnedItems(first: 3) {
+      edges {
+        node {
+          ... on Repository {
+            name
+            description
+            stargazerCount
+            languages(first: 1) {
+              nodes {
+                name
+              }
+            }
+            owner {
+              avatarUrl(size: 24)
+              login
+            }
+          }
+        }
+      }
+    }
+    followers {
+      totalCount
+    }
+    following {
+      totalCount
+    }
+  }
+}

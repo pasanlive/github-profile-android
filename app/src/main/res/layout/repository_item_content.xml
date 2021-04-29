@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintLeft_toRightOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/repo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        style="@style/TextViewStyle.bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/repo_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repo_name" />
+
+    <ImageView
+        android:id="@+id/stars"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_star"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repo_description" />
+
+    <TextView
+        android:id="@+id/stars_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/double_margin"
+        android:layout_marginRight="@dimen/double_margin"
+        android:text="@string/followers_label"
+        app:layout_constraintLeft_toRightOf="@id/stars"
+        app:layout_constraintTop_toTopOf="@id/stars" />
+
+    <ImageView
+        android:id="@+id/language_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/double_margin"
+        android:layout_marginLeft="@dimen/double_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/circle"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/stars"
+        app:layout_constraintLeft_toRightOf="@+id/stars_count"
+        app:layout_constraintTop_toTopOf="@id/stars" />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/double_margin"
+        android:layout_marginRight="@dimen/double_margin"
+        android:text="@string/followers_label"
+        app:layout_constraintLeft_toRightOf="@id/language_icon"
+        app:layout_constraintTop_toTopOf="@id/stars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

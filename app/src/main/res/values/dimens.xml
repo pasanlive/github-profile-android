@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="page_padding">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="double_margin">16dp</dimen>
+    <dimen name="large_avatar_margin">16dp</dimen>
+    <dimen name="card_round_edge_radius">10dp</dimen>
+</resources>
